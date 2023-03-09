@@ -77,7 +77,7 @@ class NumSolvesController extends Controller
                 'data' => unserialize($question->data)
             ],
             'answer' => [
-                'data' => array()
+                'data' => $answer_data
             ]
         ];
         return $ret;
