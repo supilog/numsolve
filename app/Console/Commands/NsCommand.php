@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Libs\NsSolveLib;
+use App\Libs\NsSolveLibManual;
 use App\Models\Question;
 use Carbon\Carbon;
 use Illuminate\Console\Command;
@@ -24,8 +25,11 @@ class NsCommand extends Command
 
         $dt_start = new Carbon();
         $nsl = new NsSolveLib();
-        $result = $nsl->solveBackTrack($question);
+        $nslm = new NsSolveLibManual();
+        // $result = $nsl->solveBackTrack($question);
+        $result = $nslm->solveManual($question);
         $dt_end = new Carbon();
+
         echo "A:\n";
         echo "------------------\n";
         $this->display_field($result);
