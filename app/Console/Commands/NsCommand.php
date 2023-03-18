@@ -25,9 +25,9 @@ class NsCommand extends Command
 
         $dt_start = new Carbon();
         $nsl = new NsSolveLib();
-        $nslm = new NsSolveLibManual();
-        // $result = $nsl->solveBackTrack($question);
-        $result = $nslm->solveManual($question);
+        $result = $nsl->solveBackTrack($question);
+        // $nslm = new NsSolveLibManual();
+        // $result = $nslm->solveManual($question);
         $dt_end = new Carbon();
 
         echo "A:\n";
